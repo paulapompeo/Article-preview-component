@@ -11,6 +11,7 @@ export const Container = styled.div`
         width: 285px;
         height: 280px;
         border-radius: 10px 0 0 10px;
+        box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
     }
 `;
 
@@ -20,6 +21,7 @@ export const Content = styled.div`
     background: #FFFFFF;
     padding: 32px 40px;
     border-radius: 0 10px 10px 0;
+    box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
 
     h3 {
         width: 390px;
