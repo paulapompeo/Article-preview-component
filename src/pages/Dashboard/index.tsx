@@ -1,12 +1,19 @@
-import React from 'react';
-
-import { Container, Content } from './styles';
+import React, {useState, useEffect} from 'react';
 
 import infoImg from '../../assets/photo.png';
 import avatar from '../../assets/avatar.png';
 import share from '../../assets/icon-share.svg';
 
+
+import { Container, Content } from './styles';
+
 const Dashboard: React.FC = () => {
+    const [open, setOpen] = useState(false);
+
+    useEffect(() =>{
+        console.log(open);
+    }, [open])
+
     return (
         <Container>
             <img src={infoImg} alt="info"/>
@@ -23,7 +30,7 @@ const Dashboard: React.FC = () => {
                             <span>28 Jun 2020</span>
                         </div>
                     </div>
-                    <button>
+                    <button className="share">
                         <img src={share} alt="share"/>
                     </button>
                 </div>
