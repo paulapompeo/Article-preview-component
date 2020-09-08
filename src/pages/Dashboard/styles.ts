@@ -28,7 +28,7 @@ export const Content = styled.div`
         height: 84px;
         margin-bottom: 12px;
 
-        font-weight: bold;
+        font-weight: 700;
         font-size: 20px;
         line-height: 28px;
         letter-spacing: 0.25px;
@@ -85,16 +85,69 @@ export const Content = styled.div`
             }
         }
 
-        button {
+        .share {
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            button {
             border: 0;
             border-radius: 50%;
             width: 32px;  
             height: 32px;
             margin-top: 8px;
 
+                &.focused {
+                    background:  #48556A;
+                }
+            }
+            
+            .tooltip {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-65%);
+                bottom: calc(
+                    100% + 12px
+                );
+
+
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                margin: 18px 36px;
+                visibility: hidden;
+
+                width: 248px;
+                height: 55px;
+                background:  #48556A;
+                border-radius: 10px;
+                box-shadow: 0px 10px 10px rgba(201, 213, 225, 0.503415);
+
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 20px;
+                letter-spacing: 5px;
+
+                color: #9DAEC2;
+
+                &::before {
+                    content: '';
+                    border-style: solid;
+                    border-color: #48556A transparent;
+                    border-width: 12px 12px 0 12px;
+                    top: 100%;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                    
+                &.active {
+                    visibility: visible;
+                    opacity: 1;
+                } 
+            }
+
         }
-
+        
     }
-
-
 `;
